@@ -1,0 +1,61 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<link rel="stylesheet" href="styles.css" />
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Unjani Clinic Booking</title>
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+
+</head>
+<body>
+  <div class="container">
+    <h1>Unjani Clinic Booking Form</h1>
+    <form id="bookingForm">
+      <label for="fullname">Full Name:</label>
+      <input type="text" id="fullname" name="fullname" required />
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" required />
+
+      <label for="service">Service Required:</label>
+      <select id="service" name="service" required>
+        <option value="">-- Select --</option>
+        <option value="General Consultation">General Consultation</option>
+        <option value="Family Planning">Family Planning</option>
+        <option value="HIV Testing">HIV Testing</option>
+        <option value="Child Immunization">Child Immunization</option>
+      </select>
+
+      <label for="date">Preferred Date:</label>
+      <input type="date" id="date" name="date" required />
+
+      <label for="time">Preferred Time:</label>
+      <input type="time" id="time" name="time" required />
+
+      <button type="submit">Book Appointment</button>
+    </form>
+    <div id="confirmation" class="hidden">
+      ✅ Your appointment has been submitted!
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+<P id="errorMsg" class="error hidden"></P>
+
+<div id="confirmation" class="confirmation hidden">
+  ✅ Appointment submitted! We'll get back to you soon.
+</div>
+
+<input type="hidden" name="to_name" value="Unjani Clinic">
+

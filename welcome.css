@@ -1,0 +1,46 @@
+/* welcome.css */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f8fa;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.container {
+  text-align: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+  margin-bottom: 50px;
+}
+
+/* Login/Sign in link */
+.login-link {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+  z-index: 10;
+}
+
+.login-link:hover {
+  text-decoration: underline;
+}
